@@ -28,11 +28,13 @@ public class certificateGenerator {
     }
 
     static int getAverageScore(List<Integer> grades) {
+        int maximumScore = 20;
+        int totalScoreNumber = grades.size() * 100;
         int sumAll = 0;
         for (int i : grades) {
             sumAll = sumAll + i;
         }
-        return sumAll/grades.size();
+        return (maximumScore*sumAll)/(totalScoreNumber);
     }
 
     static void printCertificate(List<Integer> grades, int averageScore, String studentName) {
